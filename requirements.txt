@@ -1,0 +1,15 @@
+base58==2.1.1
+certifi==2023.11.17
+charset-normalizer==3.3.2
+idna==3.6
+ipfshttpclient==0.7.0
+multiaddr==0.0.9
+mysql-connector-python==8.2.0
+netaddr==0.9.0
+protobuf==4.21.12
+python-dotenv==1.0.0
+requests==2.31.0
+six==1.16.0
+urllib3==2.1.0
+varint==1.0.2
+
