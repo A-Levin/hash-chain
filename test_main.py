@@ -30,6 +30,7 @@ class TestMain(unittest.TestCase):
             cell = hashlib.sha256((row + previous).encode("utf-8")).hexdigest()
             previous = cell
             expected_result += cell
+        expected_result = hashlib.sha256(expected_result.encode("utf-8")).hexdigest()
         self.assertEqual(result, expected_result, "Ошибка в calculate_row_hash")
 
     @patch('main.upload_to_ipfs', return_value="some_ipns_hash")

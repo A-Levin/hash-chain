@@ -55,7 +55,7 @@ def calculate_row_hash(row_data) -> str:
         # step 2: renew previous cell hash
         previous_cell_hash = cell_hash
         row_hash += cell_hash
-    return row_hash
+    return hashlib.sha256(row_hash.encode("utf-8")).hexdigest()
 
 def calculate_table_hash(table_data) -> str:
     """Calculating table IPNS-hash"""
