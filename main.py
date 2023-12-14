@@ -80,8 +80,8 @@ def upload_to_ipfs(data) -> str:
             # uploading data to IPFS
             ipfs_hash = client.add_str(data)['Hash']
             # publishing data to IPNS
-            ipns_name = client.name.publish(ipfs_hash)['Name']
-        return ipns_name
+            # need to implement this step
+        return ipfs_hash
     except Exception as e:
         logger.error(f"Error uploading to IPFS or publishing to IPNS: {e}")
         raise
